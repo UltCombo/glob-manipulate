@@ -16,7 +16,7 @@
   },
   "homepage": "https://github.com/UltCombo/glob-manipulate",
   "engines": {
-    "node": ">= 0.10"
+    "node": ">= 0.8"
   },
   "scripts": {
     "test": "jshint . && jscs . -c .jscsrc && mocha"
