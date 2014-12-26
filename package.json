@@ -1,6 +1,6 @@
 {
   "name": "glob-manipulate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Glob manipulation utilities",
   "main": "index.js",
   "keywords": [
