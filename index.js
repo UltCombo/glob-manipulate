@@ -9,6 +9,10 @@ module.exports = {
 	}),
 	unprefix: manipulator(function(glob, prefix) {
 		return glob.replace(new RegExp('^(!|)' + prefix.replace(/\W/g, '\\$&')), '$1');
+	}),
+	isNegative: manipulator(isNegative),
+	isPositive: manipulator(function(glob) {
+		return !isNegative(glob);
 	})
 };
 
@@ -20,4 +24,8 @@ function manipulator(cb) {
 			return cb.apply(this, [glob].concat(args));
 		}, this);
 	};
+}
+
+function isNegative(glob) {
+	return glob[0] === '!';
 }

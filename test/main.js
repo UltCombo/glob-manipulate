@@ -23,4 +23,12 @@ describe('Manipulations', function() {
 	it('should unprefix globs', function() {
 		globManip.unprefix(['base/aaa', '!base/bbb'], 'base/').should.eql(['aaa', '!bbb']);
 	});
+
+	it('should return whether a glob is positive', function() {
+		globManip.isPositive('a').should.be.true;
+	});
+
+	it('should return whether a glob is negative', function() {
+		globManip.isNegative('!a').should.be.true;
+	});
 });

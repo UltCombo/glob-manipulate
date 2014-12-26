@@ -18,4 +18,5 @@ See the [unit tests](https://github.com/UltCombo/glob-manipulate/blob/master/tes
 
 # Changelog
 
+- **1.1.0**: Added `.isPositive()`/`.isNegative()`; simplified logic/optimization.
 - **1.0.0**: initial release.
