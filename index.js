@@ -2,10 +2,10 @@
 
 module.exports = {
 	negate: manipulator(function(glob) {
-		return ~glob.lastIndexOf('!', 0) ? glob.slice(1) : '!' + glob;
+		return glob[0] === '!' ? glob.slice(1) : '!' + glob;
 	}),
 	prefix: manipulator(function(glob, prefix) {
-		return ~glob.lastIndexOf('!', 0) ? '!' + prefix + glob.slice(1) : prefix + glob;
+		return glob[0] === '!' ? '!' + prefix + glob.slice(1) : prefix + glob;
 	}),
 	unprefix: manipulator(function(glob, prefix) {
 		return glob.replace(new RegExp('^(!|)' + prefix.replace(/\W/g, '\\$&')), '$1');
